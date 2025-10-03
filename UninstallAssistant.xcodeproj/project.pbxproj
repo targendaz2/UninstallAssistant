@@ -6,14 +6,85 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		ECE28CA62E8F862700181500 /* Helper in Resources */ = {isa = PBXBuildFile; fileRef = ECE28C712E8F847000181500 /* Helper */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECE28CA42E8F861500181500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECE28C572E8F843A00181500 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECE28C702E8F847000181500;
+			remoteInfo = Helper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ECE28C6F2E8F847000181500 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		ECE28CA12E8F859400181500 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchDaemons;
+			dstSubfolderSpec = 1;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		ECE28C5F2E8F843A00181500 /* UninstallAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UninstallAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECE28C712E8F847000181500 /* Helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Helper; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECE28CA72E8F877100181500 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		ECE28CA92E8F878600181500 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ECE28CAA2E8F87AB00181500 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		ECE28CA02E8F854B00181500 /* Exceptions for "Helper" folder in "UninstallAssistant" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				HelperProtocol.swift,
+			);
+			target = ECE28C5E2E8F843A00181500 /* UninstallAssistant */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		ECE28CA32E8F859900181500 /* Exceptions for "Helper" folder in "Copy Files" phase from "UninstallAssistant" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				com.dgrdev.UninstallAssistant.Helper.plist = (CodeSignOnCopy, );
+			};
+			buildPhase = ECE28CA12E8F859400181500 /* CopyFiles */;
+			membershipExceptions = (
+				com.dgrdev.UninstallAssistant.Helper.plist,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		ECE28C612E8F843A00181500 /* UninstallAssistant */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = UninstallAssistant;
+			sourceTree = "<group>";
+		};
+		ECE28C722E8F847000181500 /* Helper */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				ECE28CA02E8F854B00181500 /* Exceptions for "Helper" folder in "UninstallAssistant" target */,
+				ECE28CA32E8F859900181500 /* Exceptions for "Helper" folder in "Copy Files" phase from "UninstallAssistant" target */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +97,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ECE28C6E2E8F847000181500 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		ECE28C562E8F843A00181500 = {
 			isa = PBXGroup;
 			children = (
+				ECE28CAA2E8F87AB00181500 /* LICENSE */,
+				ECE28CA92E8F878600181500 /* README.md */,
+				ECE28CA72E8F877100181500 /* .gitignore */,
 				ECE28C612E8F843A00181500 /* UninstallAssistant */,
+				ECE28C722E8F847000181500 /* Helper */,
 				ECE28C602E8F843A00181500 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				ECE28C5F2E8F843A00181500 /* UninstallAssistant.app */,
+				ECE28C712E8F847000181500 /* Helper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,10 +138,12 @@
 				ECE28C5B2E8F843A00181500 /* Sources */,
 				ECE28C5C2E8F843A00181500 /* Frameworks */,
 				ECE28C5D2E8F843A00181500 /* Resources */,
+				ECE28CA12E8F859400181500 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				ECE28CA52E8F861500181500 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				ECE28C612E8F843A00181500 /* UninstallAssistant */,
@@ -69,6 +154,28 @@
 			productName = UninstallAssistant;
 			productReference = ECE28C5F2E8F843A00181500 /* UninstallAssistant.app */;
 			productType = "com.apple.product-type.application";
+		};
+		ECE28C702E8F847000181500 /* Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECE28C752E8F847000181500 /* Build configuration list for PBXNativeTarget "Helper" */;
+			buildPhases = (
+				ECE28C6D2E8F847000181500 /* Sources */,
+				ECE28C6E2E8F847000181500 /* Frameworks */,
+				ECE28C6F2E8F847000181500 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				ECE28C722E8F847000181500 /* Helper */,
+			);
+			name = Helper;
+			packageProductDependencies = (
+			);
+			productName = Helper;
+			productReference = ECE28C712E8F847000181500 /* Helper */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +188,9 @@
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					ECE28C5E2E8F843A00181500 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					ECE28C702E8F847000181500 = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
 				};
@@ -100,6 +210,7 @@
 			projectRoot = "";
 			targets = (
 				ECE28C5E2E8F843A00181500 /* UninstallAssistant */,
+				ECE28C702E8F847000181500 /* Helper */,
 			);
 		};
 /* End PBXProject section */
@@ -109,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE28CA62E8F862700181500 /* Helper in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +234,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ECE28C6D2E8F847000181500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECE28CA52E8F861500181500 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECE28C702E8F847000181500 /* Helper */;
+			targetProxy = ECE28CA42E8F861500181500 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		ECE28C682E8F843C00181500 /* Debug */ = {
@@ -185,6 +312,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -242,6 +370,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
@@ -254,16 +383,18 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2E9K39V4CT;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Uninstall Assistant";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dgrdev.UninstallAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,16 +417,18 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2E9K39V4CT;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Uninstall Assistant";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dgrdev.UninstallAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +437,42 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		ECE28C762E8F847000181500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEVELOPMENT_TEAM = 2E9K39V4CT;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_OUTPUT_FORMAT = binary;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dgrdev.UninstallAssistant.Helper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ECE28C772E8F847000181500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEVELOPMENT_TEAM = 2E9K39V4CT;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_OUTPUT_FORMAT = binary;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dgrdev.UninstallAssistant.Helper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -326,6 +495,15 @@
 			buildConfigurations = (
 				ECE28C6B2E8F843C00181500 /* Debug */,
 				ECE28C6C2E8F843C00181500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECE28C752E8F847000181500 /* Build configuration list for PBXNativeTarget "Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECE28C762E8F847000181500 /* Debug */,
+				ECE28C772E8F847000181500 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
