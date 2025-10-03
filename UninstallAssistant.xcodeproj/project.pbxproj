@@ -50,12 +50,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		ECE28CA02E8F854B00181500 /* Exceptions for "Helper" folder in "UninstallAssistant" target */ = {
+		ECE28D1C2E8F8BFA00181500 /* Exceptions for "Common" folder in "UninstallAssistant" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Constants.swift,
+				Errors.swift,
 				HelperProtocol.swift,
 			);
 			target = ECE28C5E2E8F843A00181500 /* UninstallAssistant */;
+		};
+		ECE28D1D2E8F8BFA00181500 /* Exceptions for "Common" folder in "Helper" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Constants.swift,
+				Errors.swift,
+				HelperProtocol.swift,
+			);
+			target = ECE28C702E8F847000181500 /* Helper */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -81,10 +92,18 @@
 		ECE28C722E8F847000181500 /* Helper */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				ECE28CA02E8F854B00181500 /* Exceptions for "Helper" folder in "UninstallAssistant" target */,
 				ECE28CA32E8F859900181500 /* Exceptions for "Helper" folder in "Copy Files" phase from "UninstallAssistant" target */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		ECE28D1B2E8F8BEE00181500 /* Common */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				ECE28D1C2E8F8BFA00181500 /* Exceptions for "Common" folder in "UninstallAssistant" target */,
+				ECE28D1D2E8F8BFA00181500 /* Exceptions for "Common" folder in "Helper" target */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -113,6 +132,7 @@
 				ECE28CAA2E8F87AB00181500 /* LICENSE */,
 				ECE28CA92E8F878600181500 /* README.md */,
 				ECE28CA72E8F877100181500 /* .gitignore */,
+				ECE28D1B2E8F8BEE00181500 /* Common */,
 				ECE28C612E8F843A00181500 /* UninstallAssistant */,
 				ECE28C722E8F847000181500 /* Helper */,
 				ECE28C602E8F843A00181500 /* Products */,

@@ -69,29 +69,16 @@ struct ContentView: View {
                 Button("Test Helper") {
                     print("TEST: Sending Helper Request")
 
-                    let connection = NSXPCConnection(machServiceName: helperServiceName)
-                    print("TEST: Connection: \(connection)")
-
-                    connection.remoteObjectInterface = NSXPCInterface(with: HelperProtocol.self)
-                    connection.interruptionHandler = {
-                        print("TEST: XPC connection interrupted")
+                    guard let (_, proxy) = connectToHelper() else {
+                        return
                     }
-                    connection.invalidationHandler = {
-                        print("TEST: XPC connection invalidated")
-                    }
-                    connection.resume()
-                    print("TEST: Connection resumed")
 
-                    if let proxy = connection.remoteObjectProxy as? HelperProtocol {
-                        print("TEST: Proxy: \(proxy)")
-                        proxy.performCalculation(firstNumber: 23, secondNumber: 19) { result in
-                            print("Result of calculation is: \(result)")
-                            testResult = result
-                        }
+                    print("TEST: Proxy: \(proxy)")
+                    proxy.performCalculation(firstNumber: 23, secondNumber: 19) { result in
+                        print("Result of calculation is: \(result)")
+                        testResult = result
                         print("TEST: Done")
                     }
-
-                    // connection.invalidate()
                 }
             }
 
